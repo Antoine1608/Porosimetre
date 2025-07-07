@@ -5,6 +5,7 @@ from streamlit_image_coordinates import streamlit_image_coordinates
 import utils as ut
 import numpy as np
 
+# Configuration de Streamlit
 st.set_page_config(
     page_title="Mesure de porosité",
     page_icon="🎯",
@@ -17,17 +18,19 @@ with tab1:
         
     st.title(":dart: Mesure de porosités")
     
+# Initialisation du session_state    
     if "points" not in st.session_state:
         st.session_state["points"] = []
     
     if "rotation_angle" not in st.session_state:
         st.session_state["rotation_angle"] = 0
     
-    st.header("Click on image")
-    
+    st.header("Cliquez sur l'image")
+
+    # Fonction pour visualiser un point lors des clicks sur l'image    
     def get_ellipse_coords(point: tuple[int, int]) -> tuple[int, int, int, int]:
         center = point
-        radius = 1
+        radius = 3
         return (
             center[0] - radius,
             center[1] - radius,
@@ -38,17 +41,18 @@ with tab1:
     # Liste des fichiers dans le dossier data
     image_files = [f for f in glob.glob("data/*.jpg")]
     
-    # Sélection de l'image
+    # Bouton pour sélectionner une image
     selected_image = st.sidebar.selectbox("Sélectionnez une image:", image_files)
     
-    # Définition du diamètre et de la longueur du cylindre
+    # Champs pour enregistrer diamètre et longueur du cylindre
     Diam = st.sidebar.number_input("Diamètre")
     Long = st.sidebar.number_input("Longueur")
     
     # Affichage de l'image et enregistrement du click
-    st.write("## Image")
+    #st.write("## Image")
     
     with Image.open(selected_image) as img:
+        
         # Redimensionner l'image à 500 pixels de largeur tout en conservant les proportions
         width, height = img.size
         new_width = 500
@@ -117,11 +121,11 @@ with tab1:
         }
     
         for label, point in points_dict.items():
-            draw.text((point[0] + 5, point[1] - 5), label, fill="blue")
+            draw.text((point[0] + 5, point[1] - 5), label, fill="red")
     
-        draw.line(xy=[C, G], width=3, fill="yellow")
-        # trace la parallèle à DB passant par G
-        # Calculer la ligne parallèle à DB passant par G
+        draw.line(xy=[C, G], width=1, fill="yellow")
+
+        # Fonction pour tracer une parallèle
         def parallele_AB_C(A, B, C):
             # Calculer la pente de la ligne AB
             if B[0] - A[0] == 0:
@@ -146,28 +150,24 @@ with tab1:
                     x2 = img.width
                     y2 = slope * img.width + intercept
             # Dessiner la ligne parallèle
-            draw.line(xy=[(x1, y1), (x2, y2)], width=3, fill="green")
+            draw.line(xy=[(x1, y1), (x2, y2)], width=1, fill="yellow")
     
+        # Tracer les parallèles à DB et DA passant par G
         parallele_AB_C(D, B, G)
         parallele_AB_C(D, A, G)
     
-        # Afficher l'image annotée
-        st.image(img, caption="Image avec annotations", use_column_width=True)
-    
-        #for label, point in points_dict.items():
-            #st.write(f"{label} : {point}")
-    
-        st.write("longeur poro : ", long_poro)
-        st.write("largeur poro : ",larg_poro)
+        # Afficher l'image annotée et les dimensions de la porosité
+        st.image(img, caption="Image avec annotations", use_column_width=True)    
+        st.write(f"longeur poro : {long_poro:.2f}")
+        st.write(f"largeur poro : {larg_poro:.2f}")
     
     elif len(lp) == 14:
-        st.write(14)
         b = lp[-1]
-        idx = np.argmin([np.abs(a[0]-b[0]+a[1]-b[1]) for a in lp[:-1]])
+        idx = np.argmin([np.abs(a[0]-b[0])+np.abs(a[1]-b[1]) for a in lp[:-1]])
         st.session_state["points"].remove(lp[idx])
-        #lp = st.session_state["points"].copy()
+        st.write("Essayez un double click")
         print(len(st.session_state["points"]))
-    
+        print(st.session_state["points"])    
     else:
         st.write("Veuillez sélectionner exactement 13 points.")
 
