@@ -212,5 +212,5 @@ with tab1:
 with tab2:
     st.title("Guide")
     #st.image(Image.open(r"C:\Users\John\Desktop\jupyter_notebooks\Porosimetre\data\result.png"))
-    st.image(Image.open(r"./data/result.png"))
+    st.image(Image.open(r"data/result_.png"))
 
