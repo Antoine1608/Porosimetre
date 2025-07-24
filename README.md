@@ -23,7 +23,7 @@ Voir la vidéo ci-dessous qui synthétise tout ce qui est vu dans ce chapitre.
 ### Explication des calculs :
 Les points renseignés permettent de déterminer l'axe de symétrie de la figure et le point de fuite des lignes parallèles à l'axe du perçage. Grâce à ce point de fuite, on peut projeter sur une ligne horizontale le diamètre apparent du perçage ainsi que la largeur apparente de la porosité. Avec la valeur du diamètre du perçage rentrée au départ, on en déduit, par un produit en croix, la largeur réelle de la porosité :
 
-$\[ \text{largeur réelle porosité} = \frac{\text{largeur apparente porosité} \times \text{diamètre réel perçage}}{\text{diamètre apparent perçage}} \]$
+$\text{largeur réelle porosité} = \frac{\text{largeur apparente porosité} \times \text{diamètre réel perçage}}{\text{diamètre apparent perçage}} \$
 
 En ce qui concerne la détermination de la longueur de la porosité qui se trouve dans l'axe du perçage, on doit procéder d'une manière différente. Sur la ligne d'horizon, on va poser un nouveau point décalé par rapport au point de fuite. À partir de ce nouveau point, comme dans l'étape précédente pour la largeur, on va pouvoir projeter la longueur du perçage ainsi que la longueur de la porosité sur une ligne horizontale. On en déduit la longueur apparente de la porosité par rapport à la longueur apparente du perçage. Et avec la valeur réelle de la longueur du perçage rentrée au départ, par un produit en croix, on en déduit la longueur réelle de la porosité :
 
