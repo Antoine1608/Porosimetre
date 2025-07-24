@@ -37,7 +37,7 @@ $\text{longueur réelle porosité} = \frac{\text{longueur apparente porosité} \
 - Taper la commande suivante :
   ```streamlit run ui.py```
 
-### Option 2 - Pour la déployer avec docker:
+### Option 2 - Pour la déployer avec docker :
 - Ouvrir Docker desktop (préalablement installé)
 - Dans la CLI taper :
   ```docker build -t img .```
@@ -57,7 +57,7 @@ pour récupérer l'id (ex:1d0464dd6def)
   ```docker stop 1d0464dd6def```
 pour fermer le conteneur
 
-### Option 3 - Pour la déployer avec streamlit.io:
+### Option 3 - Pour la déployer avec streamlit.io :
 
 - Dans le navigateur aller dans streamlit.io
 
