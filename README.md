@@ -30,7 +30,7 @@ En ce qui concerne la détermination de la longueur de la porosité qui se trouv
 streamlit run ui.py
 ```
 
-Option 2 - Pour la déployer avec docker:
+### Option 2 - Pour la déployer avec docker:
 -Ouvrir Docker desktop (préalablement installé)
 -Dans la CLI taper :
   ```sh
@@ -60,7 +60,7 @@ docker stop 1d0464dd6def
 ```
 pour fermer le conteneur
 
-Option 3 - Pour la déployer avec streamlit.io:
+### Option 3 - Pour la déployer avec streamlit.io:
 
 -Dans le navigateur aller dans streamlit.io
 
