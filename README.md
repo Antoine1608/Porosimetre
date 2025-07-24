@@ -3,6 +3,8 @@
 ### Présentation :
 Il s'agit d'une application pour mesurer la taille de porosité à l'intérieur de perçages usinés sur des pièces de fonderie. L'utilisateur fournit une image du perçage avec sa porosité, le diamètre du perçage et la longueur du perçage. L'application renvoie ensuite la largeur et la longueur de la porosité.
 
+![photo_ui](/data/ui_4.png)
+
 ### Guide d'utilisation :
 1. Déployer l'application (voir chapitre Déploiement)
 2. Importer l'image du perçage avec la porosité en prenant bien soin d'avoir une photo qui montre le perçage dans toute sa longueur.
