@@ -31,31 +31,21 @@ En ce qui concerne la détermination de la longueur de la porosité qui se trouv
 ### Option 2 - Pour la déployer avec docker:
 - Ouvrir Docker desktop (préalablement installé)
 - Dans la CLI taper :
-  ```sh
-docker build -t img . 
-```
+  ```docker build -t img .```
 (attention : ne pas oublier le ".")
 
 - Ensuite Dans la CLI taper :  
-```sh
-docker run -d -p 8501:8501 img
-```
+```docker run -d -p 8501:8501 img```
 - Dans google Chrome taper 
-  ```sh
-Localhost:8501 
-```
+  ```Localhost:8501```
 et l'interface streamlit s'ouvre
 
 - Une fois terminé, taper dans la CLI 
-  ```sh
-docker ps 
-```
+  ```docker ps```
 pour récupérer l'id (ex:1d0464dd6def)
 
 - Dans la CLI taper : 
-  ```sh
-docker stop 1d0464dd6def
-```
+  ```docker stop 1d0464dd6def```
 pour fermer le conteneur
 
 ### Option 3 - Pour la déployer avec streamlit.io:
@@ -73,47 +63,3 @@ pour fermer le conteneur
 - Dans setting préciser Python 3.9
 
 - Deploy
-
-
-
-# Porosimètre
-
-### Présentation :
-Il s'agit d'une application pour mesurer la taille de porosité à l'intérieur de perçages usinés sur des pièces de fonderie. L'utilisateur fournit une image du perçage avec sa porosité, le diamètre du et la longueur du perçage.L'application ensuite renvoie la largeur et la longueur de la porosité.
-
-### Guide d'utilisation : 
-1- Déployer l'application (voir chapitre Déploiement)
-2- Rentrer l'image du perçage avec la porosité en prenant bien soin d'avoir une photo qui montre le perçage dans toute sa longueur (voir un exemple de photos ci-dessous) 
-3- Cliquer ensuite sur différents points précis de l'image pour permettre à l'algorithme de faire ses calculs. Les points à sélectionner sont présentés sous l'onglet "guide" 
-4- Une fois les points les points sélectionnés le calcul se fait automatiquement et à la fin apparaissent les valeurs de la largeur et de la longueur de la porosité. En même temps s'affiche une image avec les différents traits de construction pour arriver au résultat. Il est possible de replacer les points en recliquant sur les zones les plus appropriées sur l'image interactive. 
-Voir la vidéo ci-dessous qui synthétise tout ce qui est vu dans ce chapitre 
-
-### Explication des calculs :
-Les points renseignés permettent de déterminer l'axe de symétrie de la figure et le point de fuite des lignes parallèle à l'axe du perçage. Grâce à ce point de fuite on peut projeter sur une ligne horizontale le diamètre apparent du perçage ainsi que la largeur apparente de la porosité. Avec la valeur du diamètre du perçage rentrée au départ on en déduit, par un produit en croix la largeur réelle de la porosité: largeur réelle porosité = largeur apparente porosité * diamètre réel perçage / diamètre apparent perçage
-En ce qui concerne la détermination de la longueur de la porosité qui se trouve dans l'axe du perçage on doit proposer procéder d'une manière différente. Sur la ligne d'horizon on va poser un bouveau point décalé par rapport au point de fuite. A partir de ce nouveau point, comme dans l'étape précédente pour la largeur, on va pouvoir projeter la longueur du perçage ainsi que la longueur de la porosité sur une ligne horizontale. On en retire la longueur apparente de la porosité par rapport à la longueur apparente du perçage. Et avec la valeur réelle de la longueur du perçage rentrée au départ, par un produit en croix on en déduit la longueur réelle de la porosité :  longueur réelle porosité = longueur apparente porosité * longueur réelle perçage / longueur apparente perçage
-
-
-## Déploiement :
-Option 1 - Pour la déployer en local:
--Cloner ce dépôt
--Dans la CLI se placer dans le répertoire Porosimetre
--Taper streamlit run ui.py
--Dans google Chrome taper Localhost:8501 et l'interface streamlit s'ouvre
-
-Option 2 - Pour la déployer avec docker:
--Ouvrir Docker desktop (préalblement installé)
--Dans la CLI taper docker build -t img . (attention : ne pas oublier le ".")
--Ensuite Dans la CLI taper docker run -d -p 8501:8501 img
--Dans google Chrome taper Localhost:8501 et l'interface streamlit s'ouvre
--Une fois terminé, taper dans la CLI docker ps pour récupérer l'id (ex:1d0464dd6def)
--Dans la CLI taper docker stop 1d0464dd6def
-
-Option 3 - Pour la déployer avec streamlit.io:
--Dans le navigateur aller dans streamlit.io
--Deploying?: Try free en haut à droite de l'écran
--Create app en haut à droite de l'écran
--Deploy a public app from GitHub - Deploy now
--Remplir les champs (ceux du repos GitHub)
--Dans setting préciser Python 3.9
--Deploy
-
