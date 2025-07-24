@@ -206,7 +206,7 @@ with tab1:
         st.write(f"largeur poro : {larg_poro:.2f}")
 
     else:
-        st.write("Veuillez sélectionner exactement 6 points.")
+        st.write("Veuillez sélectionner exactement 12 points.")
 
 with tab2:
     st.title("Guide")
