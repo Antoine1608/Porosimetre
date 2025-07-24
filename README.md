@@ -20,6 +20,8 @@ _photo NOK : on ne voit pas le perçage dans toute sa longueur :_
 
 Voir la vidéo ci-dessous qui synthétise tout ce qui est vu dans ce chapitre.
 
+[video](.\video.mp4)
+
 ### Explication des calculs :
 Les points renseignés permettent de déterminer l'axe de symétrie de la figure et le point de fuite des lignes parallèles à l'axe du perçage. Grâce à ce point de fuite, on peut projeter sur une ligne horizontale le diamètre apparent du perçage ainsi que la largeur apparente de la porosité. Avec la valeur du diamètre du perçage rentrée au départ, on en déduit, par un produit en croix, la largeur réelle de la porosité :
 
