@@ -1,3 +1,4 @@
 /.ipynb_checkpoints
 /venv
 /_pycache_
+requirements_venv.txt
