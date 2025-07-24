@@ -6,6 +6,10 @@ Il s'agit d'une application pour mesurer la taille de porosité à l'intérieur 
 ### Guide d'utilisation :
 1. Déployer l'application (voir chapitre Déploiement)
 2. Importer l'image du perçage avec la porosité en prenant bien soin d'avoir une photo qui montre le perçage dans toute sa longueur (voir un exemple de photos ci-dessous)
+![photo_OK]_photo OK : on voit le perçage dans toute sa longueur :_
+![photo_OK](/data/perçage_OK.png)
+_photo NOK : on ne voit pas le perçage dans toute sa longueur :_
+![photo_NOK](\data\perçage_NOK.png")
 3. Cliquer ensuite sur différents points précis de l'image pour permettre à l'algorithme de faire ses calculs. Les points à sélectionner sont présentés sous l'onglet "guide"
 4. Une fois les points sélectionnés, le calcul se fait automatiquement et à la fin apparaissent les valeurs de la largeur et de la longueur de la porosité. En même temps s'affiche une image avec les différents traits de construction pour arriver au résultat. Il est possible de replacer les points en recliquant sur les zones les plus appropriées sur l'image interactive.
 
