@@ -31,30 +31,30 @@ streamlit run ui.py
 ```
 
 ### Option 2 - Pour la déployer avec docker:
--Ouvrir Docker desktop (préalablement installé)
--Dans la CLI taper :
+- Ouvrir Docker desktop (préalablement installé)
+- Dans la CLI taper :
   ```sh
 docker build -t img . 
 ```
 (attention : ne pas oublier le ".")
 
--Ensuite Dans la CLI taper :  
+- Ensuite Dans la CLI taper :  
 ```sh
 docker run -d -p 8501:8501 img
 ```
--Dans google Chrome taper 
+- Dans google Chrome taper 
   ```sh
 Localhost:8501 
 ```
 et l'interface streamlit s'ouvre
 
--Une fois terminé, taper dans la CLI 
+- Une fois terminé, taper dans la CLI 
   ```sh
 docker ps 
 ```
 pour récupérer l'id (ex:1d0464dd6def)
 
--Dans la CLI taper : 
+- Dans la CLI taper : 
   ```sh
 docker stop 1d0464dd6def
 ```
@@ -62,19 +62,19 @@ pour fermer le conteneur
 
 ### Option 3 - Pour la déployer avec streamlit.io:
 
--Dans le navigateur aller dans streamlit.io
+- Dans le navigateur aller dans streamlit.io
 
--Deploying?: Try free en haut à droite de l'écran
+- Deploying?: Try free en haut à droite de l'écran
 
--Create app en haut à droite de l'écran
+- Create app en haut à droite de l'écran
 
--Deploy a public app from GitHub - Deploy now
+- Deploy a public app from GitHub - Deploy now
 
--Remplir les champs (ceux du repos GitHub)
+- Remplir les champs (ceux du repos GitHub)
 
--Dans setting préciser Python 3.9
+- Dans setting préciser Python 3.9
 
--Deploy
+- Deploy
 
 
 
