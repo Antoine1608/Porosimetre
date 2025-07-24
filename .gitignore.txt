@@ -2,3 +2,4 @@
 /venv
 /_pycache_
 requirements_venv.txt
+test.py

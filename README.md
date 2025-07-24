@@ -16,7 +16,14 @@ _photo NOK : on ne voit pas le perçage dans toute sa longueur :_
 ![photo_NOK](/data/perçage_NOK.png)
 
 3. Cliquer ensuite sur différents points précis de l'image pour permettre à l'algorithme de faire ses calculs. Les points à sélectionner sont présentés sous l'onglet "guide"
-4. Une fois les points sélectionnés, le calcul se fait automatiquement et à la fin apparaissent les valeurs de la largeur et de la longueur de la porosité. En même temps s'affiche une image avec les différents traits de construction pour arriver au résultat. Il est possible de replacer les points en recliquant sur les zones les plus appropriées sur l'image interactive.
+
+![photo_input](/data/input_4.png)
+
+4. Une fois les points sélectionnés, le calcul se fait automatiquement et à la fin apparaissent les valeurs de la largeur et de la longueur de la porosité. En même temps s'affiche une image avec les différents traits de construction pour arriver au résultat. 
+
+![photo_output](/data/output_4.png)
+
+Il est possible de replacer les points en recliquant sur les zones les plus appropriées sur l'image interactive.
 
 Voir la vidéo ci-dessous qui synthétise tout ce qui est vu dans ce chapitre.
 
