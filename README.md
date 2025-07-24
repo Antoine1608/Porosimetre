@@ -26,10 +26,7 @@ En ce qui concerne la détermination de la longueur de la porosité qui se trouv
 - Cloner ce dépôt
 - Dans la CLI, se placer dans le répertoire Porosimetre
 - Taper la commande suivante :
-  ```
-
-streamlit run ui.py
-```
+  ```streamlit run ui.py```
 
 ### Option 2 - Pour la déployer avec docker:
 - Ouvrir Docker desktop (préalablement installé)
